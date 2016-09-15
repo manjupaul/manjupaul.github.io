@@ -5,11 +5,13 @@
 # Site
 title: The Bigdata QA
 subtitle: A colleciton of my notes
-description: <p>I am a Software Test Engineer. But in fact, I am a Developer, a Tester, and a User, at least that is how I evolved over time. I started this blog to capture my thoughts, notes and other things to ponder.</p>
+description: <p>I am a Software Test Engineer. But in fact, I am a Developer, a Tester, and a User, at least that is how I evolved over time. I am a Software Developer focused on Quality! is just another way to put it. I started this blog to capture my thoughts, notes and other things to ponder.</p>
              <p>Most of the time I have no much idea on what I am jotting down, so you should take everything on this site with a grain of salt! :-).</p>
 author: Manju Paul
 language:
 timezone:
+disqus_shortname: manjupaul
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -105,5 +107,5 @@ links:
 
 
 # Info
-archive_footer_content: FOOTER Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Archive
-post_footer_content: POST FOOTER ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post
+archive_footer_content: I do believe that mistakes are *opportunities to learn*, I take criticisms positively. Please do let me know if you find something wrong in the posts above.
+post_footer_content: I do believe that mistakes are *opportunities to learn*, I take criticisms positively. Please do let me know if you find something wrong in the post above.
