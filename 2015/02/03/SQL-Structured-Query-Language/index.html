@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>SQL - Structured Query Language | The Bigdata QA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SQL is a special-purpose programming language designed for managing information in a relational database management system (RDBMS).In this post, I am going to describe few simple entities and demonstr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL - Structured Query Language">
+<meta property="og:url" content="http://thebigdataqa.com/2015/02/03/SQL-Structured-Query-Language/index.html">
+<meta property="og:site_name" content="The Bigdata QA">
+<meta property="og:description" content="SQL is a special-purpose programming language designed for managing information in a relational database management system (RDBMS).In this post, I am going to describe few simple entities and demonstr">
+<meta property="og:image" content="https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/imgs/hr-schema.jpg">
+<meta property="og:updated_time" content="2016-09-16T03:05:14.284Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL - Structured Query Language">
+<meta name="twitter:description" content="SQL is a special-purpose programming language designed for managing information in a relational database management system (RDBMS).In this post, I am going to describe few simple entities and demonstr">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/imgs/hr-schema.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="The Bigdata QA" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-SQL-Structured-Query-Language" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SQL - Structured Query Language
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>SQL is a special-purpose programming language designed for managing information in a relational database management system (RDBMS).<br>In this post, I am going to describe few simple entities and demonstrate how SQL can be used to manage those. </p>
+<p><strong>What is a table ?</strong><br>The data or information in database is stored in these tables. Tables are uniquely identified by their names and are comprised of columns and rows. Columns contain the column name, data type, and any other attributes for the column. Rows contain the records or data for the columns. When we model real-world entities they get represented using Table. </p>
+<p>To start with, let’s create a schema that is identical to HR schema published for Oracle. I have ported it into MSQL you can find all the necessary SQLs <a href="https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/ddl/hr_schema.sql" target="_blank" rel="external">here</a>. The entities and the relationship among them are represented in the ER diagram below. I have auto generated that using Toad for MySQL application.<br><img src="https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/imgs/hr-schema.jpg" alt=""></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE regions (</div><div class="line">	region_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	region_name VARCHAR(25),</div><div class="line">	PRIMARY KEY (region_id)</div><div class="line">	);</div><div class="line"></div><div class="line">CREATE TABLE countries (</div><div class="line">	country_id CHAR(2) NOT NULL,</div><div class="line">	country_name VARCHAR(40),</div><div class="line">	region_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	PRIMARY KEY (country_id),</div><div class="line">	CONSTRAINT countries_regions_region_id FOREIGN KEY (region_id) REFERENCES regions(region_id)</div><div class="line">	);</div><div class="line"></div><div class="line">CREATE TABLE locations (</div><div class="line">	location_id INT (11) UNSIGNED NOT NULL AUTO_INCREMENT,</div><div class="line">	street_address VARCHAR(40),</div><div class="line">	postal_code VARCHAR(12),</div><div class="line">	city VARCHAR(30) NOT NULL,</div><div class="line">	state_province VARCHAR(25),</div><div class="line">	country_id CHAR(2) NOT NULL,</div><div class="line">	PRIMARY KEY (location_id),</div><div class="line">	CONSTRAINT locations_countries_country_id FOREIGN KEY (country_id) REFERENCES countries(country_id)</div><div class="line">	);</div><div class="line"></div><div class="line">CREATE TABLE departments (</div><div class="line">	department_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	department_name VARCHAR(30) NOT NULL,</div><div class="line">	manager_id INT (11) UNSIGNED,</div><div class="line">	location_id INT (11) UNSIGNED,</div><div class="line">	PRIMARY KEY (department_id),</div><div class="line">	CONSTRAINT departments_locations_location_id FOREIGN KEY (location_id) REFERENCES locations(location_id)</div><div class="line">	);</div><div class="line"></div><div class="line">CREATE TABLE jobs (</div><div class="line">	job_id VARCHAR(10) NOT NULL,</div><div class="line">	job_title VARCHAR(35) NOT NULL,</div><div class="line">	min_salary DECIMAL(8, 0) UNSIGNED,</div><div class="line">	max_salary DECIMAL(8, 0) UNSIGNED,</div><div class="line">	PRIMARY KEY (job_id)</div><div class="line">	);</div><div class="line"></div><div class="line">CREATE TABLE employees (</div><div class="line">	employee_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	first_name VARCHAR(20),</div><div class="line">	last_name VARCHAR(25) NOT NULL,</div><div class="line">	email VARCHAR(25) NOT NULL,</div><div class="line">	phone_number VARCHAR(20),</div><div class="line">	hire_date DATE NOT NULL,</div><div class="line">	job_id VARCHAR(10) NOT NULL,</div><div class="line">	salary DECIMAL(8, 2) NOT NULL,</div><div class="line">	commission_pct DECIMAL(2, 2),</div><div class="line">	manager_id INT (11) UNSIGNED,</div><div class="line">	department_id INT (11) UNSIGNED,</div><div class="line">	PRIMARY KEY (employee_id),</div><div class="line">	CONSTRAINT employees_jobs_job_id FOREIGN KEY (job_id) REFERENCES jobs(job_id),</div><div class="line">	CONSTRAINT employees_departments_department_id FOREIGN KEY (department_id) REFERENCES departments(department_id),</div><div class="line">	CONSTRAINT employees_employees_employee_id FOREIGN KEY (manager_id) REFERENCES employees(employee_id)</div><div class="line">	);</div><div class="line"></div><div class="line">ALTER TABLE departments ADD FOREIGN KEY (manager_id) REFERENCES employees (employee_id);</div><div class="line"></div><div class="line">CREATE TABLE job_history (</div><div class="line">	employee_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	start_date DATE NOT NULL,</div><div class="line">	end_date DATE NOT NULL,</div><div class="line">	job_id VARCHAR(10) NOT NULL,</div><div class="line">	department_id INT (11) UNSIGNED NOT NULL,</div><div class="line">	CONSTRAINT job_history_employees_employee_id FOREIGN KEY (employee_id) REFERENCES employees(employee_id),</div><div class="line">	CONSTRAINT job_history_jobs_job_id FOREIGN KEY (job_id) REFERENCES jobs(job_id),</div><div class="line">	CONSTRAINT job_history_departments_department_id FOREIGN KEY (department_id) REFERENCES departments(department_id)</div><div class="line">	);</div><div class="line"></div><div class="line">ALTER TABLE job_history ADD UNIQUE INDEX (</div><div class="line">	employee_id,</div><div class="line">	start_date</div><div class="line">	);</div><div class="line"></div><div class="line">``` </div><div class="line">**What is a primary key ?**</div><div class="line"> A primary key is a field in a table which uniquely identifies each row/record. This puts forward the following restriction on `employee_id` in `employees`:</div><div class="line">  - It cannot be NULL</div><div class="line">  - It should be unique, i.e. you cannot repeat the same primary key value in a table. </div><div class="line"></div><div class="line">**What is a foreign key ?**</div><div class="line"> A foreign key is a field in a table that can only contain the value of a primary key in another table. This puts forward the following restrictions on `department_id` in `employees`:</div><div class="line">  - It can be NULL</div><div class="line">  - If it is not NULL, it must contain a value already available in `department_id` field in `departments` table. </div><div class="line"></div><div class="line"></div><div class="line">## SQL Joins</div><div class="line"></div><div class="line">Joins are used to combine rows from multiple tables by specifying matching criteria. Usually, it is based on primary key-foreign key relations.</div><div class="line">For example , return rows that combine data from  `locations` and `departments` tables by matching the `locations.location_id` primary key to the `departments.location_id` foreign key.</div><div class="line"></div><div class="line">Before we begin let's look at what is there in `locations`, `departments` and `employees`</div><div class="line">```sql</div><div class="line">mysql&gt; select * from locations limit 3;</div><div class="line">+-------------+-------------------------+-------------+--------+------------------+------------+</div><div class="line">| location_id | street_address          | postal_code | city   | state_province   | country_id |</div><div class="line">+-------------+-------------------------+-------------+--------+------------------+------------+</div><div class="line">|        1000 | 1297 Via Cola di Rie    | 00989       | Roma   | NULL             | IT         |</div><div class="line">|        1100 | 93091 Calle della Testa | 10934       | Venice | NULL             | IT         |</div><div class="line">|        1200 | 2017 Shinjuku-ku        | 1689        | Tokyo  | Tokyo Prefecture | JP         |</div><div class="line">+-------------+-------------------------+-------------+--------+------------------+------------+</div><div class="line">3 rows in set (0.00 sec)</div><div class="line"></div><div class="line">mysql&gt; select * from departments limit 3;</div><div class="line">+---------------+-----------------+------------+-------------+</div><div class="line">| department_id | department_name | manager_id | location_id |</div><div class="line">+---------------+-----------------+------------+-------------+</div><div class="line">|            10 | Administration  |        200 |        1700 |</div><div class="line">|            20 | Marketing       |        201 |        1800 |</div><div class="line">|            30 | Purchasing      |        114 |        1700 |</div><div class="line">+---------------+-----------------+------------+-------------+</div><div class="line">3 rows in set (0.00 sec)</div><div class="line"></div><div class="line">                                                                                                                                                      </div><div class="line">mysql&gt; select * from employees limit 3;                                                                                                               </div><div class="line">+-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+    </div><div class="line">| employee_id | first_name | last_name | email    | phone_number | hire_date  | job_id  | salary   | commission_pct | manager_id | department_id |    </div><div class="line">+-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+    </div><div class="line">|         100 | Steven     | King      | SKING    | 515.123.4567 | 1987-06-17 | AD_PRES | 24000.00 |           NULL |       NULL |            90 |    </div><div class="line">|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568 | 1989-09-21 | AD_VP   | 17000.00 |           NULL |        100 |            90 |    </div><div class="line">|         102 | Lex        | De Haan   | LDEHAAN  | 515.123.4569 | 1993-01-13 | AD_VP   | 17000.00 |           NULL |        100 |            90 |    </div><div class="line">+-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+    </div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure>
+<p>There are various types of joins, I will go through each one in detail here. </p>
+<ul>
+<li>Equi Join</li>
+<li>Self Join</li>
+<li>Natural Join </li>
+<li>Inner Join</li>
+<li>Outer Join<br>– Left Outer Join<br>– Right Outer Join<br>– Full Outer Join </li>
+<li>Cross Join</li>
+</ul>
+<h3 id="Equi-Join"><a href="#Equi-Join" class="headerlink" title="Equi Join"></a>Equi Join</h3><p>In pure SQL terminology any kind of JOIN you do with an equality operator (=) is an equi join. So an outer join, or inner join if is having an equality operator is an equi join, I will show examples of those later. Lets look at a plain vanilla equi join which lists the department and its manager.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">mysql&gt;  select d.department_name, l.city, l.state_province,l.country_id</div><div class="line">    -&gt;  from departments d , locations l</div><div class="line">    -&gt; where d.location_id = l.location_id limit 3;</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">| department_name | city                | state_province | country_id |</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">| IT              | Southlake           | Texas          | US         |</div><div class="line">| Shipping        | South San Francisco | California     | US         |</div><div class="line">| Administration  | Seattle             | Washington     | US         |</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<h3 id="Self-join"><a href="#Self-join" class="headerlink" title="Self-join"></a>Self-join</h3><p>If we join the same table then it is called a self-join. In this example, I will list the employees and their managers. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select concat(e.first_name, ' ', e.last_name) as employee , concat(m.first_name, ' ' , m.last_name) as manager</div><div class="line">    -&gt;  from employees e, employees m</div><div class="line">    -&gt;  where e.manager_id = m.employee_id limit 5;</div><div class="line">+------------------+------------------+</div><div class="line">| employee         | manager          |</div><div class="line">+------------------+------------------+</div><div class="line">| Neena Kochhar    | Steven King      |</div><div class="line">| Lex De Haan      | Steven King      |</div><div class="line">| Alexander Hunold | Lex De Haan      |</div><div class="line">| Bruce Ernst      | Alexander Hunold |</div><div class="line">| David Austin     | Alexander Hunold |</div><div class="line">+------------------+------------------+</div><div class="line">5 rows in set (0.00 sec)</div></pre></td></tr></table></figure>
+<h3 id="Natural-Join"><a href="#Natural-Join" class="headerlink" title="Natural Join"></a>Natural Join</h3><p>A natural join links all columns in two tables with the same name. It is a sort cut notation, in which we are really performing equi join without explitly mentioning the column name.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select d.department_name, l.city, l.state_province, l.country_id</div><div class="line">    -&gt; from departments d NATURAL JOIN locations l limit 3;</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">| department_name | city                | state_province | country_id |</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">| IT              | Southlake           | Texas          | US         |</div><div class="line">| Shipping        | South San Francisco | California     | US         |</div><div class="line">| Administration  | Seattle             | Washington     | US         |</div><div class="line">+-----------------+---------------------+----------------+------------+</div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<p>The implemnation of natural join in MSQL do not allow you to specify the column name. So it will not yield right results when the matching column names signify sligtly different data.<br>Let us look back at equi join once again, to list managers of each department by combining <code>departments</code> and <code>employees</code>.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ', e.last_name) as manager</div><div class="line">    -&gt; from departments d , employees e</div><div class="line">    -&gt; where d.manager_id = e.employee_id limit 5;</div><div class="line">+-----------------+-------------------+</div><div class="line">| department_name | manager           |</div><div class="line">+-----------------+-------------------+</div><div class="line">| Administration  | Jennifer Whalen   |</div><div class="line">| Marketing       | Michael Hartstein |</div><div class="line">| Purchasing      | Den Raphaely      |</div><div class="line">| Human Resources | Susan Mavris      |</div><div class="line">| Shipping        | Adam Fripp        |</div><div class="line">+-----------------+-------------------+</div><div class="line">5 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<p>The same thing with NATURAL JOIN will not give use correct result, as <code>manager_id</code> column is there in both <code>departments</code> and <code>employees</code> table and NATURAL JOIN will pick the column name to join as <code>manager_id</code>.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ', e.last_name) as manager</div><div class="line">    -&gt; from departments d NATURAL JOIN employees e limit 5;</div><div class="line">+-----------------+----------------+</div><div class="line">| department_name | manager        |</div><div class="line">+-----------------+----------------+</div><div class="line">| Marketing       | Pat Fay        |</div><div class="line">| Purchasing      | Alexander Khoo |</div><div class="line">| Purchasing      | Shelli Baida   |</div><div class="line">| Purchasing      | Sigal Tobias   |</div><div class="line">| Purchasing      | Guy Himuro     |</div><div class="line">+-----------------+----------------+</div><div class="line">5 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<p>So my advice is never to use natural joins as its full syntax is not supported in MySQL and will give erratic results. </p>
+<h3 id="Inner-Join"><a href="#Inner-Join" class="headerlink" title="Inner Join"></a>Inner Join</h3><p>The inner join is the most common type of joins. An inner join is used to get the cross product between two tables, combining all records from both tables. To get the right result you can use an equi-join or one natural join (column names between tables must be the same). It is the default join also so you can omit the <code>INNER</code> keyword. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select d.department_name , concat(e.first_name, ' ' , e.last_name) as manager from departments d</div><div class="line">    -&gt; INNER join employees e on d.manager_id = e.employee_id</div><div class="line">    -&gt; limit 3;</div><div class="line">+-----------------+-------------------+</div><div class="line">| department_name | manager           |</div><div class="line">+-----------------+-------------------+</div><div class="line">| Administration  | Jennifer Whalen   |</div><div class="line">| Marketing       | Michael Hartstein |</div><div class="line">| Purchasing      | Den Raphaely      |</div><div class="line">+-----------------+-------------------+</div><div class="line">3 rows in set (0.00 sec)</div><div class="line"></div><div class="line">-- a variation of the same query is </div><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d</div><div class="line">    -&gt; JOIN employees e</div><div class="line">    -&gt; where d.manager_id = e.employee_id</div><div class="line">    -&gt; limit 3;</div><div class="line">+-----------------+-------------------+</div><div class="line">| department_name | manager           |</div><div class="line">+-----------------+-------------------+</div><div class="line">| Administration  | Jennifer Whalen   |</div><div class="line">| Marketing       | Michael Hartstein |</div><div class="line">| Purchasing      | Den Raphaely      |</div><div class="line">+-----------------+-------------------+</div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure>
+<h3 id="Left-Outer-Join"><a href="#Left-Outer-Join" class="headerlink" title="Left Outer Join"></a>Left Outer Join</h3><p>A left outer join will list all the entries form left side table of an equi join even if there is no match found. For example, in the list below I am displaying all the records from <code>employees</code> and if available the departments at which they work.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select e.first_name, e.last_name, d.department_name</div><div class="line">    -&gt; from employees e</div><div class="line">    -&gt; left join departments d on e.department_id = d.department_id</div><div class="line">    -&gt; order by d.department_name asc</div><div class="line">    -&gt; limit 3;</div><div class="line">+------------+-----------+-----------------+</div><div class="line">| first_name | last_name | department_name |</div><div class="line">+------------+-----------+-----------------+</div><div class="line">| Kimberely  | Grant     | NULL            |</div><div class="line">| William    | Gietz     | Accounting      |</div><div class="line">| Shelley    | Higgins   | Accounting      |</div><div class="line">+------------+-----------+-----------------+</div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure>
+<p>A right outer join will list all the entries form right side table of an equi join even if there is no match found. For example, in the list below I am displaying all the records from departments and if available the emplyoees who work there.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select e.first_name, e.last_name, d.department_name</div><div class="line">    -&gt; from employees e</div><div class="line">    -&gt; right join departments d on d.department_id = e.department_id</div><div class="line">    -&gt; order by d.department_name asc</div><div class="line">    -&gt; limit 5;</div><div class="line">+------------+-----------+-----------------+</div><div class="line">| first_name | last_name | department_name |</div><div class="line">+------------+-----------+-----------------+</div><div class="line">| Shelley    | Higgins   | Accounting      |</div><div class="line">| William    | Gietz     | Accounting      |</div><div class="line">| Jennifer   | Whalen    | Administration  |</div><div class="line">| NULL       | NULL      | Benefits        |</div><div class="line">| NULL       | NULL      | Construction    |</div><div class="line">+------------+-----------+-----------------+</div><div class="line">5 rows in set (0.00 sec)</div></pre></td></tr></table></figure>
+<h3 id="Cross-Join"><a href="#Cross-Join" class="headerlink" title="Cross Join"></a>Cross Join</h3><p> Cross join will give cartisien product or cross product of the tables.  An inner join without the equavility condition is a cross join. The following sqls will give us cross product.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d, employees e;</div><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d cross join employees e;</div><div class="line">mysql&gt; select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d join employees e;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2015/02/03/SQL-Structured-Query-Language/" class="article-date">
+  <time datetime="2015-02-04T03:29:34.000Z" itemprop="datePublished">2015-02-03</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-sql-joins-mysql/">sql, sql-joins, mysql</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2016/02/14/docker/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Docker
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/22/How-to-make-Egg-Bhurji/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to make Egg Bhurji</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I do believe that mistakes are <em>opportunities to learn</em>, I take criticisms positively. Please do let me know if you find something wrong in the post above.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'manjupaul';
+   
+   var disqus_url = 'http://thebigdataqa.com/2015/02/03/SQL-Structured-Query-Language/';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

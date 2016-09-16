@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://thebigdataqa.com/2016/02/14/docker/index.html">
 <meta property="og:site_name" content="The Bigdata QA">
 <meta property="og:description" content="Docker, I am excited!, I am not going to describe what docker is, how it to install it etc. See https://www.docker.com/ for details. Docker is mostly used by software developers and system administrat">
-<meta property="og:updated_time" content="2016-09-15T02:42:40.717Z">
+<meta property="og:updated_time" content="2016-09-15T03:27:36.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
 <meta name="twitter:description" content="Docker, I am excited!, I am not going to describe what docker is, how it to install it etc. See https://www.docker.com/ for details. Docker is mostly used by software developers and system administrat">
@@ -65,7 +65,7 @@
 <h3 id="How-to-use-it"><a href="#How-to-use-it" class="headerlink" title="How to use it"></a>How to use it</h3><p>With Docker, it is very easy to setup a software in your machine. Wow! thanks to DockerHub, there are a lot of ready-made software containers available. You name it, you will find it there. I can experiment without worrying whether my actions corrupt the software. With few simple commands, I can install or uninstall say a database and run it. </p>
 <h3 id="Installing-MySQL"><a href="#Installing-MySQL" class="headerlink" title="Installing MySQL"></a>Installing MySQL</h3><p>To begin with, you have to go to <a href="https://hub.docker.com/" target="_blank" rel="external">https://hub.docker.com/</a> and search for MySQL. The first search result(<a href="https://hub.docker.com/_/mysql/" target="_blank" rel="external">https://hub.docker.com/_/mysql/</a>) will take you to the official MySQL server container(s). You can download this prebuilt server by issuing the pull command. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull mysql:5.5</div></pre></td></tr></table></figure>
-<p>In order to start MySQL server, you can run the following command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name mp-mysql-server <span class="_">-e</span> MYSQL_ROOT_PASSWORD=root123 <span class="_">-e</span> MYSQL_DATABASE=ems -p 3306:3306 <span class="_">-d</span> mysql:5.5</div></pre></td></tr></table></figure></p>
+<p>In order to start MySQL server, you can run the following command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name mp-mysql-server <span class="_">-e</span> MYSQL_ROOT_PASSWORD=root123 <span class="_">-e</span> MYSQL_DATABASE=ems -p 3306:3306 <span class="_">-d</span> -v  C:/Users/manju/docker/mysql:/var/lib/mysql mysql:5.5</div></pre></td></tr></table></figure></p>
 <p>The following command will show the list of running containers. You can obtain the unique identifier for the container from the output.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps</div></pre></td></tr></table></figure>
 <p>The following command can be used to SSH into a running container.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker <span class="built_in">exec</span> -it &lt;container-id&gt; bash</div></pre></td></tr></table></figure></p>
@@ -111,7 +111,10 @@
     </a>
   
   
-    <span id="article-nav-older" class="article-nav-link-wrap older"></span>
+    <a href="/2015/02/03/SQL-Structured-Query-Language/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SQL - Structured Query Language</div>
+    </a>
   
 </nav>
 
