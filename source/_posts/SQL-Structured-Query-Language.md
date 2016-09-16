@@ -26,7 +26,7 @@ To start with, let's create a schema that is identical to HR schema published fo
 ## SQL Joins
 
 Joins are used to combine rows from multiple tables by specifying matching criteria. Usually, it is based on primary key-foreign key relations.
-For example , return rows that combine data from  `locations` and `departments` tables by matching the `locations.location_id` primary key to the `departments.location_id` foreign key.
+For example, return rows that combine data from  `locations` and `departments` tables by matching the `locations.location_id` primary key to the `departments.location_id` foreign key.
 
 Before we begin let's look at what is there in `locations`, `departments` and `employees`
 ```sql
@@ -110,7 +110,7 @@ mysql> select concat(e.first_name, ' ', e.last_name) as employee , concat(m.firs
 ```
 
 ### Natural Join 
-A natural join links all columns in two tables with the same name. It is a sort cut notation, in which we are really performing equi join without explitly mentioning the column name. 
+A natural join links all columns in two tables with the same name. It is a short cut notation, in which we are really performing equi join without explicitly mentioning the column name. 
 ```sql
 mysql> select d.department_name, l.city, l.state_province, l.country_id
     -> from departments d NATURAL JOIN locations l limit 3;
@@ -123,7 +123,7 @@ mysql> select d.department_name, l.city, l.state_province, l.country_id
 +-----------------+---------------------+----------------+------------+
 3 rows in set (0.00 sec)
 ```
-The implemnation of natural join in MSQL do not allow you to specify the column name. So it will not yield right results when the matching column names signify sligtly different data. 
+The implementation of natural join in MSQL do not allow you to specify the column name. So it will not yield right results when the matching column names signify slightly different data. 
 Let us look back at equi join once again, to list managers of each department by combining `departments` and `employees`. 
 ```sql
 mysql> select d.department_name, concat(e.first_name, ' ', e.last_name) as manager
@@ -209,7 +209,7 @@ mysql> select e.first_name, e.last_name, d.department_name
 3 rows in set (0.00 sec)
 
 ```
-A right outer join will list all the entries form right side table of an equi join even if there is no match found. For example, in the list below I am displaying all the records from departments and if available the emplyoees who work there.
+A right outer join will list all the entries form right side table of an equi join even if there is no match found. For example, in the list below I am displaying all the records from departments and if available the employees who work there.
 
 ```sql
 mysql> select e.first_name, e.last_name, d.department_name
@@ -229,7 +229,7 @@ mysql> select e.first_name, e.last_name, d.department_name
 5 rows in set (0.00 sec)
 ```
 ### Cross Join
- Cross join will give cartisien product or cross product of the tables.  An inner join without the equavility condition is a cross join. The following sqls will give us cross product. 
+ Cross join will give cartesian product or cross product of the tables.  An inner join without the equality condition is a cross join. The following sqls will give us cross product. 
 ```sql
 mysql> select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d, employees e;
 mysql> select d.department_name, concat(e.first_name, ' ' , e.last_name) as manager from departments d cross join employees e;
