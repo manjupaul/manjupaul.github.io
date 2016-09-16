@@ -17,7 +17,7 @@ docker pull mysql:5.5
 ```
 In order to start MySQL server, you can run the following command
 ```bash
-docker run --name mp-mysql-server -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=ems -p 3306:3306 -d mysql:5.5
+docker run --name mp-mysql-server -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=ems -p 3306:3306 -d -v  C:/Users/manju/docker/mysql:/var/lib/mysql mysql:5.5
 ```
 
 The following command will show the list of running containers. You can obtain the unique identifier for the container from the output.
