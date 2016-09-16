@@ -17,7 +17,7 @@ disqus_shortname: manjupaul
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://thebigdataqa.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 permalink_defaults:
 
 # Directory
@@ -78,7 +78,7 @@ deploy:
 
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-84262971-1
 favicon: /favicon.ico
 twitter:
 google_plus:
