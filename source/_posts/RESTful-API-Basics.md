@@ -1,14 +1,18 @@
 ---
 title: RESTful API - Basics
 date: 2016-04-16 07:14:08
+categories:
+- tools
 tags:
+- REST
+- API
 ---
 A _very minimal_ overview of REST. REST stands for Representational State Transfer. It is an architectural style originally described by Roy Fielding, one of the authors of HTTP 1.0 and 1.1, in a doctoral dissertation at UC Irvine in 2000. 
 
-**Why is REST so famous ?** 
+#### Why is REST so famous ? 
 Towards the beginning of this decade, a lot of companies started making their applications and services available on Internet. Also, they are moving service APIs which otherwise was protected behind the firewall,to the wilderness of Internet. HTTP being the defacto communication protocol used in Internet, REST that blends well with HTTP has made it a good choice. 
 
-**Concepts**
+#### Concepts
 - URL - Stands for Uniform Resource Locator, for example `http://hilton.com/chantilly/rooms/25`
 - Resource - The information or entity that is identified by a URL, example Room number 25 
 - Representation - How it is represented. JSON, XML or HTML etc, by default RESTful APIs use JSON. 

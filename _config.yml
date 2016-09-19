@@ -1,23 +1,14 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
-title: The Bigdata QA
+title: Manju Paul
+motto: A software engineer focused on Quality
 subtitle: A colleciton of my notes
-description: <p>I am a Software Test Engineer. But in fact, I am a Developer, a Tester, and a User, at least that is how I evolved over time. I am a Software Developer focused on Quality! is just another way to put it. I started this blog to capture my thoughts, notes and other things to ponder.</p>
-             <p>Most of the time I have no much idea on what I am jotting down, so you should take everything on this site with a grain of salt! :-).</p>
+description: _A software enginner focused on Quality!_ - This website has a colleciton of my personal notes
 author: Manju Paul
-language:
+language: en
 timezone:
-disqus_shortname: manjupaul
 
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://thebigdataqa.com
+url: https://manjupaul.github.io
 root: /
-permalink: :year/:title/
+permalink: :year/:title.html
 permalink_defaults:
 
 # Directory
@@ -51,10 +42,6 @@ default_category: uncategorized
 category_map:
 tag_map:
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
@@ -63,10 +50,7 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: typing
+theme: maupassant
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -74,38 +58,4 @@ deploy:
   type: git
   repository: https://github.com/manjupaul/manjupaul.github.io.git
   branch: master
-  
 
-
-# Miscellaneous
-google_analytics: UA-84262971-1
-favicon: /favicon.ico
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
-
-# Header
-menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
-
-
-# Profile
-nickname: Manju Paul
-links:
-  Blog:
-    link: /archives
-    icon: fa-bold
-  GitHub:
-    link: https://github.com/manjupaul
-    icon: fa-github
-  LinkedIn:
-    link: https://www.linkedin.com/in/manju-paul-898a78126
-    icon: fa-linkedin
-
-
-# Info
-archive_footer_content: I do believe that mistakes are *opportunities to learn*, I take criticisms positively. Please do let me know if you find something wrong in the posts above.
-post_footer_content: I do believe that mistakes are *opportunities to learn*, I take criticisms positively. Please do let me know if you find something wrong in the post above.

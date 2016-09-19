@@ -1,15 +1,18 @@
 ---
 title: How to make Egg Bhurji
 date: 2014-11-22 12:39:34
-tags: cooking, egg
+categories:
+- cooking
+tags: 
+- egg
 ---
 Recently I have been searching on the internet on how egg bhurji is made. There are a lot of recipes with scores of variations.
 The literal translation of "Egg Bhurji" is "Scrambled Eggs", but I say egg bhurji is just egg bhurji and not "scrambled eggs". Here is a recipe, with my tasty variations. Try this out, I am confident that your taste buds will not get disappointed.
 
-_By Anton Ego_: 
-> In the past, I have made no secret of my disdain for Chef Gusteau's famous motto, "Anyone can cook." But I realize, only now do I truly understand what he meant. Not everyone can become a great artist; but a great artist *can* come from *anywhere*. 
-
-Watch the youtube video [here](https://www.youtube.com/watch?v=-JPOoFkrh94#t=2m9s)
+{% blockquote Anton Ego, &nbsp; - Ratatouille %} 
+In the past, I have made no secret of my disdain for Chef Gusteau's famous motto, **_"Anyone can cook."_** But I realize, only now do I truly understand what he meant. Not everyone can become a great artist; but a great artist *can* come from *anywhere*. 
+{% endblockquote %}
+{% youtube -JPOoFkrh94#t=2m9s %}
 
 ### What you need 
  - Egg 4 numbers

@@ -1,7 +1,10 @@
 ---
 title: SQL - Structured Query Language
 date: 2015-02-03 22:29:34
-tags: sql, sql-joins, mysql
+categories:
+- database
+tags:
+- SQL
 ---
 SQL is a special-purpose programming language designed for managing information in a relational database management system (RDBMS). 
 In this post, I am going to describe few simple entities and demonstrate how SQL can be used to manage those. 

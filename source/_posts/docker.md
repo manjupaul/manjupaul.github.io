@@ -1,10 +1,14 @@
 ---
 title: Docker
 date: 2016-02-14 08:32:40
-tags: docker,mysql
+categories:
+ - database
+tags: 
+- docker
+- mysql
 ---
 Docker, I am excited!, I am not going to describe what docker is, how it to install it etc. See https://www.docker.com/ for details. Docker is mostly used by software developers and system administrators to quickly setup and manage software or  environment. 
-
+<!-- more -->
 ### How to use it
 
 With Docker, it is very easy to setup a software in your machine. Wow! thanks to DockerHub, there are a lot of ready-made software containers available. You name it, you will find it there. I can experiment without worrying whether my actions corrupt the software. With few simple commands, I can install or uninstall say a database and run it. 
