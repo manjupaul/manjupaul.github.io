@@ -12,14 +12,14 @@ In the last decade `Use cases` were often used elaborate the requirements, but w
 - A use case narrates what system does or must do as a response to an actor's action.
 - User stories are short, simple descriptions of a feature(or requirement) told from the perspective of the person who desires the new capability.
 
-{% blockquote UsabilityFirst http://www.usabilityfirst.com/about-usability/introduction-to-user-centered-design/ User Persona %}
+{% blockquote UsabilityFirst  http://www.usabilityfirst.com/about-usability/introduction-to-user-centered-design/ - User Persona %}
 User-Centered Design (UCD) is the process of designing a tool, such as a website’s or application’s user interface, from the perspective of how it will be understood and used by a human user. Rather than requiring users to adapt their attitudes and behaviors in order to learn and use a system, a system can be designed to support its intended users’ existing beliefs, attitudes, and behaviors as they relate to the tasks that the system is being designed to support.
 {% endblockquote %}
 
 
 #### Actors
 
-{% blockquote Wikipedia, https://en.wikipedia.org/wiki/Use_case#Actors, Use case %}
+{% blockquote Wikipedia  https://en.wikipedia.org/wiki/Use_case#Actors - Use case %}
 An actor might be a person, a company or organization, a computer program, or a computer system—hardware, software, or both.
 {% endblockquote %}
 
