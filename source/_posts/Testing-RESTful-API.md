@@ -1,7 +1,6 @@
 ---
 title: Testing RESTful API
 date: 2016-09-16 07:12:44
-draft: true
 categories:
 - tools
 tags:
@@ -10,27 +9,35 @@ tags:
 ---
 Step1:
 
-I am going to test a current weather data using RESTAPI service
-Step 1: Singn on https://home.openweathermap.org/ and get the API key.I created account on openweathermap.org  after that I can access the API key.
+I am going to test a current weather data using RestAPI service
+Step 1: Singn on https://home.openweathermap.org/ and get the API key.
 
 Step 2: Goto http://openweathermap.org/current.
 
- Here I am going to call current weather data for one location by city and country code.
+ Choose the Call current weather data by city name
          API call : api.openweathermap.org/data/2.5/weather?q={city name},{country code}
-         Parameter q : q city name and country code divided by comma, use ISO 3166 country codes.
+        Example - api.openweathermap.org/data/2.5/weather?q=chantilly,us&appid=xxxxxx
          
-Example of API calls:http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=xxxxxx
+Step 3: Click on Create REST project and add the URL = http://api.openweathermap.org/data/2.5/weather?q=Chantilly,us&appid=xxxxxx
 
-Step 3: Create a new REST project  and type  URL = http://api.openweathermap.org/data/2.5/weather?q=Chantilly,us&appid=xxxxxx
+Step 4: Create a TestSuite ,after that add TestCase and add TestSteps 
+ 
+Choose the GET request, we will get the  data based on parameter we passed.
 
-https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/weather/2.png 
+Now you can see a nicely formatted JSON response in the JSON view 
 
-Step 4: When we run the GET request, we will get the all data based on parameter we passed.
+![](../downloads/weather/3.png)
 
-https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/weather/3.png 
+Step 5: Add the following assertion to validate the content of the response.
 
-Now you can see a nicely formatted JSON response in the JSON view .
+1.Specify JSONpath expression to check the Longitude and Latitude are valid or not.
+2.JSON path match valid or not
+3.Specify JSONpath existance match valid or not
 
-Step 5: Time to add an actual assertion to validate the content of the response.
+![](../downloads/weather/4.png)
+        
+The working project is available in this [repository](https://github.com/manjupaul/soapui_weatherapp) 
+        
 
+ 
 
