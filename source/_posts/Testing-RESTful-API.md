@@ -7,41 +7,32 @@ tags:
 - REST
 - SoapUI
 ---
-In this post I am going to test a webservice using SOAPUI REST service.
-Here I am using a webservice named current weather data .
+Nowadays in Internet there are a lot of public APIs and most of them are REST APIs. In this post I am going to use SoapUI to test weather service API published by [openweathermap.org](https://home.openweathermap.org/). <!-- more --> A detailed documentation can be obtained from [how to start guide](http://openweathermap.org/appid).
 
-Step 1: Singn on https://home.openweathermap.org/ and get the API key.
+### Obtain API Key
+In order to access the service you will need an API key, you can register with your email at https://home.openweathermap.org/ to receive and activate the key.
 
- 
-Step 2: Goto http://openweathermap.org/current.
-Pass the parameter city name by manualy and check what will it return
+### Test manually the functionality
+The website provides GUI to access and validate the functionaly. You can play around with that to get the information on the parameters that are needed for the API to work. So the URL will be something like `api.openweathermap.org/data/2.5/weather?q=chantilly,us&appid=xxxxxx`.
 
-Example - api.openweathermap.org/data/2.5/weather?q=chantilly,us&appid=xxxxxx
+### SoapUI project
+In SoapUI, you must create a REST project and add the following URL
+`http://api.openweathermap.org/data/2.5/weather?q=Chantilly,us&appid=xxxxxx`
 
-
- Choose the Call current weather data by city name
-         API call : api.openweathermap.org/data/2.5/weather?q={city name},{country code}
-        Example - api.openweathermap.org/data/2.5/weather?q=chantilly,us&appid=xxxxxx
-         
-Step 3: Click on Create REST project and add the URL = http://api.openweathermap.org/data/2.5/weather?q=Chantilly,us&appid=xxxxxx
-
-Step 4: Create a TestSuite ,after that add TestCase and add TestSteps 
- 
-Choose the GET request, we will get the  data based on parameter we passed.
-
-Now you can see a nicely formatted JSON response in the JSON view 
-
+#### Create a TestSuite and TestCase
+You can right click on the GET request, and add it to a new TestSuite. The screenshot below shows the request and corresponding JSON response received.
 ![](../downloads/weather/3.png)
 
-Step 5: Add the following assertion to validate the content of the response.
+#### Add assertions
+I will add the following assertion to validate the content of the response.
+ - Specify JSONpath expression to check the Longitude and Latitude are valid or not.
+ - JSON path match valid or not
+ - Specify JSONpath existance match valid or not
 
-1.Specify JSONpath expression to check the Longitude and Latitude are valid or not.
-2.JSON path match valid or not
-3.Specify JSONpath existance match valid or not
-
+The screenshot below shows the assertions that were added to the testcase.
 ![](../downloads/weather/4.png)
         
-The working project is available in this [repository](https://github.com/manjupaul/soapui_weatherapp) 
+That is all you need to do to test this RESTful endpoint. A working project is available in [soapui_weatherapp repository](https://github.com/manjupaul/soapui_weatherapp).
         
 
  
