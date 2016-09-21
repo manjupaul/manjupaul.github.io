@@ -1,7 +1,7 @@
 ---
 title: Docker - MongoDB Up and Running in Minutes
 draft: true
-date: 2016-09-16 10:06:39
+date: 2016-03-12 11:18:39
 categories:
 - tools
 - database

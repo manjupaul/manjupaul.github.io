@@ -6,7 +6,7 @@ categories:
 tags: 
 - egg
 ---
-Recently I have been searching on the internet on how egg bhurji is made. There are a lot of recipes with scores of variations.
+Recently I have been searching on the internet on how egg bhurji is made. There are a lot of recipes with scores of variations.<!-- more -->
 The literal translation of "Egg Bhurji" is "Scrambled Eggs", but I say egg bhurji is just egg bhurji and not "scrambled eggs". Here is a recipe, with my tasty variations. Try this out, I am confident that your taste buds will not get disappointed.
 
 {% blockquote Anton Ego, &nbsp; - Ratatouille %} 

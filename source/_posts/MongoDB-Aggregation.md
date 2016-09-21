@@ -1,7 +1,7 @@
 ---
 title: MongoDB - Aggregation
 draft: true
-date: 2016-09-16 10:12:54
+date: 2016-07-21 10:12:54
 categories:
 - database
 tags:

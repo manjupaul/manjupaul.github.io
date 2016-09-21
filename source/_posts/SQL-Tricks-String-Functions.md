@@ -1,6 +1,6 @@
 ---
 title: SQL Tricks - String Functions
-date: 2016-09-16 10:05:01
+date: 2016-05-03 10:05:01
 categories:
 - database
 tags:

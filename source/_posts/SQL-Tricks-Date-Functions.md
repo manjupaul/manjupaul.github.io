@@ -1,6 +1,6 @@
 ---
 title: SQL Tricks - Date Functions
-date: 2016-09-16 10:04:51
+date: 2016-05-23 09:04:51
 categories:
 - database
 tags:
