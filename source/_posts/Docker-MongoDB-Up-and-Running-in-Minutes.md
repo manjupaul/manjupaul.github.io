@@ -54,4 +54,4 @@ switched to db mytest
  ```
  
 ### Conclusion
-I did the MongoDB for DBA course a local docker server always help me to brush up my knowledge. Sometime soon I will be doing a post comparing SQL and NoSQL syntaxes. 
+I did the MongoDB for DBA course long time back, having a local mongodb server always help me to brush up my knowledge. Sometime soon I will be doing a post comparing SQL and NoSQL syntaxes. 

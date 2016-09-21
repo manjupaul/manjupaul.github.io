@@ -7,12 +7,17 @@ tags:
 - REST
 - SoapUI
 ---
-Step1:
+In this post I am going to test a webservice using SOAPUI REST service.
+Here I am using a webservice named current weather data .
 
-I am going to test a current weather data using RestAPI service
 Step 1: Singn on https://home.openweathermap.org/ and get the API key.
 
+ 
 Step 2: Goto http://openweathermap.org/current.
+Pass the parameter city name by manualy and check what will it return
+
+Example - api.openweathermap.org/data/2.5/weather?q=chantilly,us&appid=xxxxxx
+
 
  Choose the Call current weather data by city name
          API call : api.openweathermap.org/data/2.5/weather?q={city name},{country code}
