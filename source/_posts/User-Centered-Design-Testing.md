@@ -7,7 +7,7 @@ tags:
 - persona
 - actor
 ---
-In the last decade `Use cases` were often used elaborate the requirements, but with Agile, `User stories` are used as a replacement. Now the trend is changing, the whole fuss is about User Centered Design. In this post I will be throwing out few thought on how Testers should change their thinking process.
+In the last decade `Use cases` were often used elaborate the requirements, but with Agile, `User stories` are used as a replacement. Now the trend is changing, the whole fuss is about User Centered Design. In this post I will be throwing out few thought on how Testers should adapt to this paradigm shift.
 
 - A use case narrates what system does or must do as a response to an actor's action.
 - User stories are short, simple descriptions of a feature(or requirement) told from the perspective of the person who desires the new capability.
