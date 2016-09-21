@@ -24,14 +24,14 @@ Service 2 : [Sunlight Lbs](https://sunlightlabs.github.io/congress/index.html) H
   
   Example :http://www.zipcodeapi.com/rest/PfcLH5o2y033eqSQpuvVRsfJGTwS2ruSHHDpN2rl3vohVg8lLEhC7wlNqSFtk9l2/info.xml/20152/degrees
   
-  Add picture  ![](../downloads/weather/3.png)
+    ![](../downloads/img_restapi/manualyResult1.png)
   
   Here we passed the parameter zipcode is 20190 and result is Reston
   
  Next I am going to use [sunlightlabs] (https://sunlightlabs.github.io/congress/index.html).Here it provides the details on how to access the web service.In order to access the service, we need to obtain an [API key](http://sunlightfoundation.com/api/accounts/register/).  
  Let's see how to test this manually using the web interface.
     
-  Addpic 2
+  ![](../downloads/img_restapi/manual_congtress_img2.png)
   
  Testing using RESTAPI service
  Step1 :Create a new REST project in SoapUI and add the zipcodeapi webservice endpoint.ie https://www.zipcodeapi.com//rest/apikey/city-zips.xml/Reston/va.
@@ -43,11 +43,11 @@ Step 3 :Create a test suite under this rest project and add these two requests i
 
 Step 4 : Add property transfer between these two test cases.Property Transfer enables us to transfer the values of zipcode from Zipcode RestfulAPI Response to Sunlight congress API Request.When we create a property transfer it will ask Source,property and target,property.
 
-add picture 3----property transfer
+![](../downloads/img_restapi/propertytransfer.png)
 
 Step 5 : Run the TestSuite  and check the result
 
-add picture 4 
+![](../downloads/img_restapi/runtestsuite.png)
 
 step 6: Add some assertions and execute this.
 

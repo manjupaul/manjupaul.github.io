@@ -13,7 +13,7 @@ In this post, I am going to describe few simple entities and demonstrate how SQL
 The data or information in database is stored in these tables. Tables are uniquely identified by their names and are comprised of columns and rows. Columns contain the column name, data type, and any other attributes for the column. Rows contain the records or data for the columns. When we model real-world entities they get represented using Table. 
 
 To start with, let's create a schema that is identical to HR schema published for Oracle. I have ported it into MSQL you can find all the necessary SQLs [here](https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/ddl/hr_schema.sql). The entities and the relationship among them are represented in the ER diagram below. I have auto generated that using Toad for MySQL application. 
-![](https://raw.githubusercontent.com/manjupaul/manjupaul.github.io/sources/ref/mysql01/imgs/hr-schema.jpg)
+![](../downloads/mysql01/imgs/hr-schema.jpg)
 
 **What is a primary key ?**
  A primary key is a field in a table which uniquely identifies each row/record. This puts forward the following restriction on `employee_id` in `employees`:
